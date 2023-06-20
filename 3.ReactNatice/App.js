@@ -1,18 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 export default function App() {
+  const hello = () => {
+    console.log("Hello my name is React Native!!");
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={[styles.text, styles.textRed]}>Hello World!</Text>
-      <View style={styles.viewStyle}>
-        <Text>テスト</Text>
-      </View>
-      <Image
-      resizeMode="contain"
-        style={styles.profileImg}
-        source={require("./assets/Person.png")}
-      />
+      <Button title="greeting button" onPress={hello()} style="auto"></Button>
       <StatusBar style="auto" />
     </View>
   );
