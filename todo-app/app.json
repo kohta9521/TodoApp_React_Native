@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "4.todoApp",
-    "slug": "4.todoApp",
+    "name": "todo-app",
+    "slug": "todo-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
