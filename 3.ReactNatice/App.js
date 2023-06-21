@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
   },
   baseView: {
     flexDirection: "row",
+    borderWidth: 2,
+    height: 120,
+    padding: 10,
+    width: "90%",
   },
   text: {
     color: "black",
