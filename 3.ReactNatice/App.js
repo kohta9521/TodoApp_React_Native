@@ -1,14 +1,35 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, Button, Alert } from "react-native";
 
 export default function App() {
-  const hello = () => {
-    console.log("Hello my name is React Native!!");
-  };
+  function hello() {
+    Alert.alert("あいさつ", "こんにちは、田中たろうです", [
+      {
+        text: "Cancel",
+        pnPress: () => console.log("キャンセルボタンが押されました。"),
+        style: "cancel",
+      },
+      {
+        text: "Ok!",
+        onPress: () => console.log("OKボタンが押されました。"),
+      },
+    ]);
+  }
 
   return (
     <View style={styles.container}>
-      <Button title="greeting button" onPress={hello()} style="auto"></Button>
+      {/* <Text style={styles.text}>sample code</Text> */}
+      <View style={styles.baseView}>
+        <Image
+          style={styles.profileImg}
+          source={require("./assets/Person.png")}
+        ></Image>
+        <View>
+          <Text style={styles.text}>田中　太郎</Text>
+          <Text style={styles.text}>趣味は読書です</Text>
+        </View>
+        <Button title="あいさつ" onPress={hello()}></Button>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -21,23 +42,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  baseView: {
+    flexDirection: "row",
+    borderWidth: 2,
+    height: 120,
+    padding: 10,
+    width: "90%",
+  },
   text: {
-    color: "white",
+    color: "black",
     fontSize: 20,
     fontWeight: "bold",
-    backgroundColor: "black",
+    backgroundColor: "white",
     padding: 10,
-  },
-  textRed: {
-    color: "red",
-    fontWeight: "bold",
-  },
-  viewStyle: {
-    width: 200,
-    height: 100,
-    backgroundColor: "blue",
-    alignItems: "center",
-    justifyContent: "center",
   },
   profileImg: {
     width: 100,
