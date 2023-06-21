@@ -1,14 +1,25 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, Button, Alert } from "react-native";
 
 export default function App() {
-  const hello = () => {
-    console.log("Hello my name is React Native!!");
-  };
+  // const hello = () => {
+  //   Alert.alert("Greeting", "Hello My name is kohta!")[
+  //     ({
+  //       text: "Cancel",
+  //       onPress: () => console.log("キャンセルボタンが押されました。"),
+  //       style: "cancel",
+  //     },
+  //     {
+  //       text: "Ok",
+  //       onPress: () => console.log("Okボタンが押されました"),
+  //     })
+  //   ];
+  // };
 
   return (
     <View style={styles.container}>
-      <Button title="greeting button" onPress={hello()} style="auto"></Button>
+      {/* <Button title="greeting button" onPress={hello()} style="auto"></Button> */}
+
       <StatusBar style="auto" />
     </View>
   );
